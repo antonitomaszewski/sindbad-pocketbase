@@ -11,8 +11,6 @@ RUN curl -fsSL https://github.com/pocketbase/pocketbase/releases/download/v${PB_
 
 COPY pb_migrations /pb/pb_migrations
 
-VOLUME /pb/pb_data
-
 EXPOSE 8090
 
 CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8090", "--dir=/pb"]
